@@ -1,5 +1,7 @@
 const modalContainer = document.querySelector('.modal-container');
 const toDoContainer = document.querySelector('.todo-tasks');
+const contentContainer = document.querySelector('.todo-container');
+// const todoHeader = document.querySelector('.todo-content-header')
 const form = document.querySelector('form');
 const input = document.getElementById('task');
 const select = document.querySelector('#status');
@@ -172,7 +174,7 @@ toDoContainer.innerHTML = filteredData?.map(({status,task},index)=>{
             <td>${index + 1}</td>
             <td>${task}</td>
             <td>${status}</td>
-            <td onclick="editData('${task}', '${status}')"><img width="40" height="40" src="https://img.icons8.com/pastel-glyph/64/ffffff/create-new--v3.png" alt="create-new--v3"/></td>
+            <td onclick="editData('${task}', '${status}')"><img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/ffffff/create-new--v3.png" alt="create-new--v3"/></td>
             <td onclick="handleDelete('${task}')"><img width="40" height="40" src="https://img.icons8.com/carbon-copy/100/ffffff/filled-trash.png" alt="filled-trash"/></td>
         </tr>
     `

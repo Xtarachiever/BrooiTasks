@@ -44,6 +44,7 @@ body{
 .container .content{
     width: 80%;
     margin: auto;
+    overflow: hidden;
 }
 .container .content select,
 .modal-container select{
@@ -154,8 +155,35 @@ body{
 .todo-content .todo-tasks tr{
     width: 100%;
 }
+table thead,
+table tbody{
+    text-align: center;
+}
+table tbody td:nth-child(2){
+    width: 35%;
+}
+.todo-table-header{
+    min-width: 600px;
+}
+table tbody td img{
+    cursor: pointer;
+}
+.no-list{
+    font-size: 48px;
+}
 /* .todo-content .todo-tasks .todo-task,
 .todo-content .todo-table-header{
     display: flex;
     justify-content: space-between;
 } */
+.no-data-container{
+    padding-top: 20px;
+}
+@media screen and (max-width: 600px) {
+    .todo-content{
+        overflow: scroll;
+    }
+    .todo-table-header table{
+        overflow: scroll;
+    }
+}

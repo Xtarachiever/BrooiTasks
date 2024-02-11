@@ -16,29 +16,32 @@
             <div class="button-div" onclick="handleModalToggle()">
                 <button>Add Task <img width="25" height="25" src="https://img.icons8.com/windows/32/plus-math.png" alt="plus-math"/></button>
             </div>
-            <div class="select-div">
-                <select id="status-field">
-                    <option value="All">All</option>
-                    <option value="Completed">Completed</option>
-                    <option value="Ongoing">Ogoing</option>
-                    <option value="Todo">Todo</option>
-                </select>
-                <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
-            </div>
-            <div class="todo-content">
-                <div class="todo-table-header">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>S/N</th>
-                                <th>Task</th>
-                                <th>Status</th>
-                                <th>Edit</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody class="todo-tasks"></tbody>
-                    </table>
+            <!-- <h2 class="no-data-container">No data available. Add task to start your todo lists</h2> -->
+            <div class="todo-container">
+                <div class="select-div">
+                    <select id="status-field">
+                        <option value="All">All</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Ongoing">Ogoing</option>
+                        <option value="Todo">Todo</option>
+                    </select>
+                    <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
+                </div>
+                <div class="todo-content">
+                    <div class="todo-table-header">
+                        <table>
+                            <thead class="todo-content-header">
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Task</th>
+                                    <th>Status</th>
+                                    <th>Edit</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody class="todo-tasks"></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
