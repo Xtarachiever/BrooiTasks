@@ -61,6 +61,9 @@ export default {
 .icon{
     cursor: pointer;
 }
+.icon:hover{
+    color: #f64c72;
+}
 .edit_icon{
     margin: 0px 10px;
 }
