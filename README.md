@@ -28,3 +28,6 @@ This is a simple todo list application built using HTML, CSS, and JavaScript. Th
 
 ## Local Storage
    The application utilizes the browser's local storage to save tasks. This means that your tasks will be saved even if you close the browser or refresh the page.
+
+#### Link to live site
+[https://html-todo-task.netlify.app/](https://html-todo-task.netlify.app/)
