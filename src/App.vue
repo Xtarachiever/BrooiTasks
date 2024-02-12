@@ -32,7 +32,7 @@
         </div> -->
       </div>
     </form>
-      <TodoLists @edit-todo="editTodo"/>
+      <TodoLists @edit-todo="editTodo" :index="index"/>
   </div>
 
 </template>
@@ -109,6 +109,10 @@ export default {
       this.updateTodo(this.todos[this.index])
       this.clearInputFields();
       this.editing = false
+      toast("Task edited successfully", {
+        autoClose: 1500,
+        type: 'success'
+      });
     },
     handleSubmit(todo){
       if(this.editing){
@@ -138,6 +142,8 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  width: 85%;
+  margin: auto;
   /* color: #2c3e50; */
   /* margin-top: 60px; */
 }
@@ -179,6 +185,9 @@ body{
 }
 
 @media screen and (max-width: 550px) {
+  #app{
+    width: 95%;
+  }
   .select-div{
     width: 100%;
   }
