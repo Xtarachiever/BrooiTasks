@@ -7,6 +7,11 @@ export default createStore({
         id:1,
         title:'First domant data',
         status:'Completed'
+      },
+      {
+        id:2,
+        title:'Trial data',
+        status:'Ongoing'
       }
     ]
   },
