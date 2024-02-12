@@ -92,7 +92,7 @@ document.getElementById('todo-form').addEventListener('submit',
         for (const entry of formEntries) {
             const [key, value] = entry;
             if(!value){
-                console.log("No field must be left empty")
+                alert("No field must be left empty")
             }else{
                 formDataObject[key] = value;
             }
@@ -111,8 +111,8 @@ document.getElementById('todo-form').addEventListener('submit',
             data.push(formDataObject);
             modalContainer.classList.add('close-modal');
         } else if(isDuplicate){
-            // Handle the case where it's a duplicate (e.g., show an alert)
-            console.log('Data with the same name already exists.');
+            // Handle the case where it's a duplicate
+            alert('Data with the same name already exists.');
         }
     }
         // To save the data
