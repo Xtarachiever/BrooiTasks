@@ -114,12 +114,19 @@ export default {
       }
     },
     updateTodo(){
-        if(this.todos[this.index].todoText !== this.todoText){
+        if(this.todos[this.index].todoText === this.todoText && this.todos[this.index].todoStatus === this.todoStatus){
+          return toast("Make changes to the task", {
+            autoClose: 1500,
+            type:'info'
+          })
+        }else{
           this.repeatedTask = -1
           this.todos[this.index].todoText = this.todoText
           this.todos[this.index].todoStatus = this.todoStatus
-        }else{
-          return
+          toast("Task Updated Successfully", {
+            autoClose: 1500,
+            type:'success'
+          })
         }
         localStorage.setItem('todos', JSON.stringify(this.todos));
         this.clearInputFields();

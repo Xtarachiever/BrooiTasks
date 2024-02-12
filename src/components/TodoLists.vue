@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="todo in todos" :key="todo.todoText" class="todo">
-      <p class="todo-text">{{todo.todoText}}</p>
+      <p :class="['todo-text', todo.todoStatus]">{{todo.todoText}}</p>
       <div class="todo-status">
         <span>{{todo.todoStatus}}</span>
         <v-icon name="ri-edit-2-line" scale="1.5" class="icon edit_icon" @click="editTodo(todo.todoText)" />
@@ -47,6 +47,10 @@ export default {
 }
 .todo-text{
   font-weight: 600;
+}
+.Completed{
+  color: #90f64c;
+  text-decoration: line-through;
 }
 @media screen and (max-width: 550px) {
   .todo{
