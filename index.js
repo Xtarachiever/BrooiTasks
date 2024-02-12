@@ -1,7 +1,8 @@
 const modalContainer = document.querySelector('.modal-container');
 const toDoContainer = document.querySelector('.todo-tasks');
 const contentContainer = document.querySelector('.todo-container');
-// const todoHeader = document.querySelector('.todo-content-header')
+const todoHeader = document.querySelector('.todo-content-header');
+const emptyDataContainer = document.querySelector('.no-data-container');
 const form = document.querySelector('form');
 const input = document.getElementById('task');
 const select = document.querySelector('#status');
@@ -166,13 +167,20 @@ statusField.addEventListener('change',function(event){
 
 
 function showData(){
-    // Retrieve the updated data from local storage
+    if(filteredData.length === 0){
+        todoHeader.style.display = "none"
+        emptyDataContainer.style.display = "block"
+    }else{
+        todoHeader.style.display = "table-header-group"
+        emptyDataContainer.style.display = "none"
+    }
+// Retrieve the updated data from local storage
 // const datatoDisplay = filteredData.length !== 0 ? filteredData : updatedLocalData
 toDoContainer.innerHTML = filteredData?.map(({status,task},index)=>{
     return`
         <tr key="${task}">
             <td>${index + 1}</td>
-            <td>${task}</td>
+            <td class="${status}">${task}</td>
             <td>${status}</td>
             <td onclick="editData('${task}', '${status}')"><img width="30" height="30" src="https://img.icons8.com/pastel-glyph/64/ffffff/create-new--v3.png" alt="create-new--v3"/></td>
             <td onclick="handleDelete('${task}')"><img width="40" height="40" src="https://img.icons8.com/carbon-copy/100/ffffff/filled-trash.png" alt="filled-trash"/></td>

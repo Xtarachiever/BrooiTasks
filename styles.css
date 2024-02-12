@@ -179,6 +179,10 @@ table tbody td img{
 .no-data-container{
     padding-top: 20px;
 }
+.Completed{
+    text-decoration: line-through;
+    color: #d9d9d9;
+}
 @media screen and (max-width: 600px) {
     .todo-content{
         overflow: scroll;
