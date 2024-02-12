@@ -1,4 +1,4 @@
-# TODO LIST APP
+# Vue.js TODO LIST APP
 This is a simple todo list application built using VueJS. The app allows users to create, edit, delete, and mark tasks as completed. The application also utilizes local storage to persist tasks even after the browser is refreshed or closed.
 
 ### FEATURES
@@ -31,4 +31,7 @@ This is a simple todo list application built using VueJS. The app allows users t
    The application utilizes the browser's local storage to save tasks. This means that your tasks will be saved even if you close the browser or refresh the page.
 
 ### Vue Toastify
-    This package was used to display various messages on the website
+   This package was used to display various messages on the website
+
+#### Link to live link
+[https://vue-todo-task.netlify.app/](https://vue-todo-task.netlify.app/)
