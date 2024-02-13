@@ -190,4 +190,10 @@ table tbody td img{
     .todo-table-header table{
         overflow: scroll;
     }
+    .modal-container .form-div{
+        width: 80%;
+    }
+    .modal-container .form-div .form-header{
+        font-size: 18px;
+    }
 }
