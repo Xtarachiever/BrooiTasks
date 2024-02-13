@@ -103,7 +103,8 @@ export default {
     },
     deleteTodo(todoTextToDelete) {
       this.filteredTodos = this.todos.filter(todo => todo.todoText !== todoTextToDelete);
-      localStorage.setItem('todos', JSON.stringify(this.filteredTodos));
+      this.todos = this.filteredTodos
+      localStorage.setItem('todos', JSON.stringify(this.todos));
     },
     editTodo(todoTextToEdit){
       this.index = this.todos.findIndex((todo)=> todo.todoText === todoTextToEdit);
