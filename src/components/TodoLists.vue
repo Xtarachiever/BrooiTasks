@@ -19,6 +19,7 @@ import { toast } from 'vue3-toastify'
 
 export default {
     props:['index'],
+    emits: ["edit-todo"],
     components: {
         "v-icon": OhVueIcon
     },

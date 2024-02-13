@@ -4,12 +4,10 @@ export default createStore({
   state: {
     todos:[
       {
-        id:1,
         title:'First domant data',
         status:'Completed'
       },
       {
-        id:2,
         title:'Trial data',
         status:'Ongoing'
       }
@@ -26,7 +24,7 @@ export default createStore({
       commit("delete_todo",title)
     },
     updateTodo({commit},todo){
-      commit("delete_todo",todo)
+      commit("update_todo",todo)
     },
   },
   mutations: {

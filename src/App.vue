@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import TodoLists from './components/TodoLists.vue'
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
@@ -62,10 +62,13 @@ export default {
   },
   methods:{
     ...mapActions(["addTodo","updateTodo"]),
-    // ...mapGetters(["addTodos"]),
+    ...mapGetters(["addTodos"]),
     clearInputFields(){
       this.title = ""
       this.status = ""
+    },
+    todoTextChange(e){
+      this.title = e.target.value
     },
     addTodoFx(){
       const duplicateTodo = this.todos.find(todo => todo.title === this.title);
@@ -91,9 +94,6 @@ export default {
         type:'success'
       });
       }
-    },
-    todoTextChange(e){
-      this.title = e.target.value
     },
     editTodo(todoTextToEdit){
       this.index = this.todos.findIndex((todo)=> todo.title === todoTextToEdit);
